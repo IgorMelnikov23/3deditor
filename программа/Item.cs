@@ -4,6 +4,7 @@ public abstract class Item{
 	Point position; //позиция x, y, z
 	Size size; //размер объекта (длина, ширина, высота)
 	Rotation rotation; // углы поворота объекта в градусах (по x, y и z)
+	List<Variable> variables = new List<Variable>();//список переменных
 	
 	/* Изменение позиции объекта */
 	public void ChangePosition(Point position){
