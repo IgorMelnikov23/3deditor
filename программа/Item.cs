@@ -6,9 +6,9 @@ public abstract class Item{
 	Rotation rotation; // углы поворота объекта в градусах (по x, y и z)
 	List<Variable> variables = new List<Variable>();//список переменных
 	
-	//пустой конструктор
+	// конструктор без параметров
 	public Item(){
-	
+		variables = new();
 	}
 	
 	/* Изменение позиции объекта */
