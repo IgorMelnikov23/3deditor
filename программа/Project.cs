@@ -16,6 +16,11 @@ public class Project{
 		items.Add(item);
 	}
 	
+	//добавить несколько объектов в проект
+	public void AddItem(List<Item> items){
+		this.items.AddRange(items);
+	}
+	
 	//удалить объект в проекте
 	public void AddItem(Item item){
 		items.Remove(item);
