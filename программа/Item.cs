@@ -6,6 +6,11 @@ public abstract class Item{
 	Rotation rotation; // углы поворота объекта в градусах (по x, y и z)
 	List<Variable> variables = new List<Variable>();//список переменных
 	
+	//пустой конструктор
+	public Item(){
+	
+	}
+	
 	/* Изменение позиции объекта */
 	public void ChangePosition(Point position){
 		this.position = position;
