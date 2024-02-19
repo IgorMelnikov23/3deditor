@@ -3,12 +3,13 @@ public class Project{
 	string caption; //наименование
 	string author; //автор
 	uint size = 0; //размер в байтах
-	List<Item> items = new List<Item>(); //объекты в проекте
+	List<Item> items; //объекты в проекте
 	
 	//создание проекта
 	public Project(string name, string author){
 		this.name = name;
 		this.author = author;
+		items = new List<Item>()
 	}
 	
 	//добавить объект в проект
