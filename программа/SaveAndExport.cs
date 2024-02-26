@@ -5,6 +5,7 @@ enum VideoType{
 	AVI = 2
 }
 
+// Модуль для экспорта и сохранения проекта
 public static class SaveAndExport{
 	
 	//сохранение проекта
