@@ -1,11 +1,19 @@
-/* Временная линия */
+namespace ConsoleApp1;
+
+/// <summary>
+/// Временная линия
+/// </summary>
 public class TimeLine{
-	//список кадров
+	/// <summary>
+	/// Список кадров
+	/// </summary>
 	List<Frame> frames = new List<Frame>();
 	
-	//запустить кадры (play)
+	/// <summary>
+	/// Запустить кадры
+	/// </summary>
 	public void Play(){
 		foreach(Frame frame in frames)
-			frame.display();
+			frame.Display();
 	}
 }

@@ -1,11 +1,19 @@
-/* Инструмент из панели инструментов */
+namespace ConsoleApp1;
+
+/// <summary>
+/// Инструмент на панели инструментов
+/// </summary>
 class Instrument{
 	
-	//название инструмента
+	/// <summary>
+	/// Название инструмента
+	/// </summary>
 	string caption; 
 	
-	//запустить инструмент
+	/// <summary>
+	/// Запустить инструмент
+	/// </summary>
 	public void Run(){
-		Execute();
+		throw new NotImplementedException();
 	}
 }

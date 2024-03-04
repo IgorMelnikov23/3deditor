@@ -1,30 +1,58 @@
-/* типы для экспорта анимации */
-enum VideoType{
+namespace ConsoleApp1;
+
+/// <summary>
+/// Тип видео
+/// </summary>
+public enum VideoType{
+	/// <summary>
+	/// Формат .mp4
+	/// </summary>
 	MP4 = 0,
-	MOV = 1,
-	AVI = 2,
-	MKV = 3
+    /// <summary>
+    /// Формат .mov
+    /// </summary>
+    MOV = 1,
+    /// <summary>
+    /// Формат .avi
+    /// </summary>
+    AVI = 2,
+    /// <summary>
+    /// Формат .mvk
+    /// </summary>
+    MKV = 3
 }
 
-// Модуль для экспорта и сохранения проекта
+/// <summary>
+/// Модуль для экспорта и сохранения проекта
+/// </summary>
 public static class SaveAndExport{
 	
-	//сохранение проекта
+	/// <summary>
+	/// Сохранить проект
+	/// </summary>
+	/// <param name="project">Проект</param>
 	public static void SaveProject(Project project){
-		File.WriteAllText(project.name +".proj", project.Serialize());
+		File.WriteAllText(project.caption +".proj", project.Serialize());
 	}
 	
-	//открытие проекта
+	/// <summary>
+	/// Открыть проект
+	/// </summary>
+	/// <returns>Проект</returns>
 	public static Project OpenProject(){
-		OpenFileDialog ofd = new OpenFileDialog();
+		/*OpenFileDialog ofd = new OpenFileDialog();
 		if (ofd.DialogResult == DialogResult.Yes)
-			return Deserialize(ofd.FileName);
-		return null;
+			return Deserialize(ofd.FileName);*/
+		return null!;
 	}
 	
-	//экспорт анимации в виде видео
+	/// <summary>
+	/// Экспорт анимации в видео
+	/// </summary>
+	/// <param name="project">Проект</param>
+	/// <param name="type">Тип видео</param>
 	public static void ExportProject(Project project, VideoType type){
-		File.WriteAllText(project.name +$".{type}" prject.Serialize(type));
+		File.WriteAllText(project.caption +$".{type}" , project.Serialize());
 	}
 	
 }

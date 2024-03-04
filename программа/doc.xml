@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleApp1</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleApp1.Animation">
+            <summary>
+            Анимация
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Animation.Play">
+            <summary>
+            Запустить анимацию
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.BasePlugin">
+            <summary>
+            Плагин (базовая реализация)
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.BasePlugin.Run">
+            <summary>
+            Запустить плагин
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.BaseWindow">
+            <summary>
+            Окно программы (базовая реализация)
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.BaseWindow.title">
+            <summary>
+            Описание (заголовок)
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.BaseWindow.widgets">
+            <summary>
+            Список виджетов в окне
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.BaseWindow.position">
+            <summary>
+            Позиция окна
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.BaseWindow.size">
+            <summary>
+            Размер окна
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.BaseWindow.Show">
+            <summary>
+            Показать окно
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Frame">
+            <summary>
+            Кадо анимации
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Frame.items">
+            <summary>
+            Список объектов для кадра
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Frame.animations">
+            <summary>
+            Список анимаций для кадра
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Frame.Display">
+            <summary>
+            Отобразить
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.InfoWindow">
+            <summary>
+            Окно справки (о программе)
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.InfoWindow.description">
+            <summary>
+            Описание программы
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.InfoWindow.author">
+            <summary>
+            Автор программы
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Instrument">
+            <summary>
+            Инструмент на панели инструментов
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Instrument.caption">
+            <summary>
+            Название инструмента
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Instrument.Run">
+            <summary>
+            Запустить инструмент
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Item">
+            <summary>
+            Объект (базовая реализация)
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Item.position">
+            <summary>
+            Позиция
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Item.size">
+            <summary>
+            Размер
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Item.rotation">
+            <summary>
+            Углы поворота
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Item.variables">
+            <summary>
+            Список переменных
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Item.#ctor">
+            <summary>
+            Конструктор без параметров
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Item.ChangePosition(System.Drawing.Point)">
+            <summary>
+            Изменение позиции
+            </summary>
+            <param name="position">Новая позиция</param>
+        </member>
+        <member name="M:ConsoleApp1.Item.ChangeSize(System.Drawing.Size)">
+            <summary>
+            Изменение размера
+            </summary>
+            <param name="size">Новый размер</param>
+        </member>
+        <member name="M:ConsoleApp1.Item.ChangeRotate(ConsoleApp1.Rotation)">
+            <summary>
+            Изменение угла поворота объекта
+            </summary>
+            <param name="rotation">Новый угол поворота</param>
+        </member>
+        <member name="T:ConsoleApp1.KeyWorker">
+            <summary>
+            Модуль для работы с горячими клавишами
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.KeyWorker.PressKeyS">
+            <summary>
+            Нажатие клавиши "S"
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.KeyWorker.PressKeyT">
+            <summary>
+            нажатие клавиши "T"
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.MainWindow">
+            <summary>
+            Главное окно программы
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.MainWindow.version">
+            <summary>
+            Версия программы
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.MainWindow.user">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.ModelingModule">
+            <summary>
+            Модуль твердотельного моделирования
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.ModelingModule.Union(ConsoleApp1.Item,ConsoleApp1.Item)">
+            <summary>
+            Объединение
+            </summary>
+            <param name="i1">Первый объект</param>
+            <param name="i2">Второй объект</param>
+        </member>
+        <member name="M:ConsoleApp1.ModelingModule.Intersect(ConsoleApp1.Item,ConsoleApp1.Item)">
+            <summary>
+            Пересечение
+            </summary>
+            <param name="i1">Первый объект</param>
+            <param name="i2">Второй объект</param>
+        </member>
+        <member name="M:ConsoleApp1.ModelingModule.Substract(ConsoleApp1.Item,ConsoleApp1.Item)">
+            <summary>
+            Разность
+            </summary>
+            <param name="i1">Первый объект</param>
+            <param name="i2">Второй объект</param>
+        </member>
+        <member name="M:ConsoleApp1.ModelingModule.Exclude(ConsoleApp1.Item,ConsoleApp1.Item)">
+            <summary>
+            Симметрическая разность
+            </summary>
+            <param name="i1">Первый объект</param>
+            <param name="i2">Второй объект</param>
+        </member>
+        <member name="T:ConsoleApp1.OS">
+            <summary>
+            операционнеаня система
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.OS.name">
+            <summary>
+            Название системы
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Project">
+            <summary>
+            Проект
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Project.caption">
+            <summary>
+            Наименование
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Project.author">
+            <summary>
+            Автор
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Project.size">
+            <summary>
+            Размер (байты)
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Project.items">
+            <summary>
+            Список объектов
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Project.#ctor(System.String,System.String)">
+            <summary>
+            Конструктор с параметрами
+            </summary>
+            <param name="caption">Наименование проекта</param>
+            <param name="author">Автор проекта</param>
+        </member>
+        <member name="M:ConsoleApp1.Project.AddItem(ConsoleApp1.Item)">
+            <summary>
+            Добавить объект в проект
+            </summary>
+            <param name="item">Объект</param>
+        </member>
+        <member name="M:ConsoleApp1.Project.AddItem(System.Collections.Generic.List{ConsoleApp1.Item})">
+            <summary>
+            Добавить несколько объектов в проект
+            </summary>
+            <param name="items">Список объектов</param>
+        </member>
+        <member name="M:ConsoleApp1.Project.RemoveItem(ConsoleApp1.Item)">
+            <summary>
+            Удалить объект из проекта
+            </summary>
+            <param name="item">Объект</param>
+        </member>
+        <member name="M:ConsoleApp1.Project.Serialize">
+            <summary>
+            Сохранить проект
+            </summary>
+            <returns>Название проекта</returns>
+        </member>
+        <member name="T:ConsoleApp1.RemoteControllerPlugin">
+            <summary>
+            Плагин "Пульт управления"
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.RemoteControllerPlugin.Run">
+            <summary>
+            Запустить плагин
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Rotation">
+            <summary>
+            Углы поворота
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Rotation.x">
+            <summary>
+            Поворот по X
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Rotation.y">
+            <summary>
+            Поврот по y
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Rotation.z">
+            <summary>
+            Поврот по z
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.VideoType">
+            <summary>
+            Тип видео
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.VideoType.MP4">
+            <summary>
+            Формат .mp4
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.VideoType.MOV">
+            <summary>
+            Формат .mov
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.VideoType.AVI">
+            <summary>
+            Формат .avi
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.VideoType.MKV">
+            <summary>
+            Формат .mvk
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.SaveAndExport">
+            <summary>
+            Модуль для экспорта и сохранения проекта
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.SaveAndExport.SaveProject(ConsoleApp1.Project)">
+            <summary>
+            Сохранить проект
+            </summary>
+            <param name="project">Проект</param>
+        </member>
+        <member name="M:ConsoleApp1.SaveAndExport.OpenProject">
+            <summary>
+            Открыть проект
+            </summary>
+            <returns>Проект</returns>
+        </member>
+        <member name="M:ConsoleApp1.SaveAndExport.ExportProject(ConsoleApp1.Project,ConsoleApp1.VideoType)">
+            <summary>
+            Экспорт анимации в видео
+            </summary>
+            <param name="project">Проект</param>
+            <param name="type">Тип видео</param>
+        </member>
+        <member name="T:ConsoleApp1.Scene">
+            <summary>
+            Сцена
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Scene.rotation">
+            <summary>
+            Углы поврота
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Scene.camera">
+            <summary>
+            Камера
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Scene.background">
+            <summary>
+            Задний фон
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.TimeLine">
+            <summary>
+            Временная линия
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.TimeLine.frames">
+            <summary>
+            Список кадров
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.TimeLine.Play">
+            <summary>
+            Запустить кадры
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Toolbar">
+            <summary>
+            Панель инструментов
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.Toolbar.intruments">
+            <summary>
+            Список инструментов
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Toolbar.RunIntrument(System.String)">
+            <summary>
+            Запустить инструмент (по названию)
+            </summary>
+            <param name="caption">Название инструмента</param>
+        </member>
+        <member name="T:ConsoleApp1.Variable">
+            <summary>
+            Переменная
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.Video">
+            <summary>
+            Видео
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.Video.Play">
+            <summary>
+            Включить видео
+            </summary>
+        </member>
+        <member name="T:ConsoleApp1.VideoWindow">
+            <summary>
+            Окно для просмотра видеоуроков
+            </summary>
+        </member>
+        <member name="F:ConsoleApp1.VideoWindow.videos">
+            <summary>
+            Список видеоуроков
+            </summary>
+        </member>
+        <member name="M:ConsoleApp1.VideoWindow.PlayVideo(System.Int32)">
+            <summary>
+            Запустить видео (но номеру)
+            </summary>
+            <param name="index">Номер видео</param>
+        </member>
+        <member name="T:ConsoleApp1.Widget">
+            <summary>
+            Виджет
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,5 +1,19 @@
-/* Галвное окно программы */
+namespace ConsoleApp1;
+
+/// <summary>
+/// Главное окно программы
+/// </summary>
 class MainWindow: BaseWindow{
-	string version; //версия программы
-	string user; //пользователь
+
+	/// <summary>
+	/// Версия программы
+	/// </summary>
+	static string version;
+
+	/// <summary>
+	/// Пользователь
+	/// </summary>
+	static string user;
+
+	
 }

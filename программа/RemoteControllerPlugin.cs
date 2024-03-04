@@ -1,10 +1,16 @@
-/* Плагин "Пульт управления" */
-class RemoteControllerPlugin: BasePlugin{
-	
-	//запустить функционал плагина
-	public void Run(){
+namespace ConsoleApp1;
+
+/// <summary>
+/// Плагин "Пульт управления"
+/// </summary>
+class RemoteControllerPlugin : BasePlugin
+{
+
+    /// <summary>
+    /// Запустить плагин
+    /// </summary>
+    public override void Run(){
 		//показать "пульт"
-		MainWindow.Show();
+		new MainWindow().Show();
 	}
-	
 }

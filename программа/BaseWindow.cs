@@ -1,9 +1,37 @@
-/* окно прогарммы */
+using System.Drawing;
+
+namespace ConsoleApp1;
+
+/// <summary>
+/// Окно программы (базовая реализация)
+/// </summary>
 abstract class BaseWindow{
-	string title; //описание окна
-	//виджеты (элементы) в окне
-	List<Widget> widgets = new List<Widget>();
-	Point position; //позиция x, y, z окна
-	Size size; //размер окна
+	/// <summary>
+	/// Описание (заголовок)
+	/// </summary>
+	string title;
 	
+	/// <summary>
+	/// Список виджетов в окне
+	/// </summary>
+	List<Widget> widgets = new List<Widget>();
+
+	/// <summary>
+	/// Позиция окна
+	/// </summary>
+	Point position;
+
+	/// <summary>
+	/// Размер окна
+	/// </summary>
+	Size size;
+
+    /// <summary>
+    /// Показать окно
+    /// </summary>
+    public void Show()
+    {
+
+    }
+
 }

@@ -1,7 +1,25 @@
-/* Кадр анимации */
+namespace ConsoleApp1;
+
+/// <summary>
+/// Кадо анимации
+/// </summary>
 public class Frame{
-	//список объектов для кадра
+	
+	/// <summary>
+	/// Список объектов для кадра
+	/// </summary>
 	List<Item> items = new List<Item>();
-	//список анимаций для кадра
+	
+	/// <summary>
+	/// Список анимаций для кадра
+	/// </summary>
 	List<Animation> animations = new List<Animation>();
+
+	/// <summary>
+	/// Отобразить
+	/// </summary>
+	public void Display()
+	{
+
+	}
 }

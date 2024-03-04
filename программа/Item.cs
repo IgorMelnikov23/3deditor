@@ -1,27 +1,60 @@
-/* Объект (абстрактный) */
+using System.Drawing;
+
+namespace ConsoleApp1;
+
+/// <summary>
+/// Объект (базовая реализация)
+/// </summary>
 public abstract class Item{
 	
-	Point position; //позиция x, y, z
-	Size size; //размер объекта (длина, ширина, высота)
-	Rotation rotation; // углы поворота объекта в градусах (по x, y и z)
+	/// <summary>
+	/// Позиция
+	/// </summary>
+	Point position;
+
+	/// <summary>
+	/// Размер
+	/// </summary>
+	Size size;
+
+	/// <summary>
+	/// Углы поворота
+	/// </summary>
+	Rotation rotation;
+
+	/// <summary>
+	/// Список переменных
+	/// </summary>
 	List<Variable> variables;//список переменных
 	
-	// конструктор без параметров
+	/// <summary>
+	/// Конструктор без параметров
+	/// </summary>
 	public Item(){
 		variables = new();
 	}
 	
-	/* Изменение позиции объекта */
+
+	/// <summary>
+	/// Изменение позиции
+	/// </summary>
+	/// <param name="position">Новая позиция</param>
 	public void ChangePosition(Point position){
 		this.position = position;
 	}
 	
-	/* Изменение размера объекта */
+	/// <summary>
+	/// Изменение размера
+	/// </summary>
+	/// <param name="size">Новый размер</param>
 	public void ChangeSize(Size size){
 		this.size = size;
 	}
 	
-	/* Изменение угла поворота объекта */
+	/// <summary>
+	/// Изменение угла поворота объекта
+	/// </summary>
+	/// <param name="rotation">Новый угол поворота</param>
 	public void ChangeRotate(Rotation rotation){
 		this.rotation = rotation;
 	}

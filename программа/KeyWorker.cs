@@ -1,16 +1,24 @@
-/* работа с горячими клавишами */
+namespace ConsoleApp1;
+
+/// <summary>
+/// Модуль для работы с горячими клавишами
+/// </summary>
 public static class KeyWorker{
 	
-	//если нажата клавиша "S" и ОС = "Window"
-	public void PressKeyS(){
-		if (OS.Name == "Window")
-			Animation.Play();
+	/// <summary>
+	/// Нажатие клавиши "S"
+	/// </summary>
+	public static void PressKeyS(){
+		if (new OS().name == "Window")
+			 new Animation().Play();
 	}
 	
-	//если нажата клавиша "T" и ОС = "MacOS"
-	public void PressKeyT(){
-		if (OS.Name == "MacOS")
-			Animation.Play();
-	}
+	/// <summary>
+	/// нажатие клавиши "T"
+	/// </summary>
+	public static void PressKeyT(){
+		if (new OS().name == "MacOS")
+            new Animation().Play();
+    }
 	
 }

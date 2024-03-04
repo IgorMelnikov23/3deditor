@@ -1,6 +1,18 @@
-/* Окно справки о программе */
+namespace ConsoleApp1;
+
+/// <summary>
+/// Окно справки (о программе)
+/// </summary>
 abstract class InfoWindow: BaseWindow{
-	string description;//описание программы
-	string author;//автор программы
+
+	/// <summary>
+	/// Описание программы
+	/// </summary>
+	string description;
+
+	/// <summary>
+	/// Автор программы
+	/// </summary>
+	string author;
 	
 }
